@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "info": "knock/v1/message",
+  "agreement": [
+    {
+      "name": "alice-bob",
+      "a_secret": "1111111111111111111111111111111111111111111111111111111111111111",
+      "a_public": "7b4e909bbe7ffe44c465a220037d608ee35897d31ef972f07f74892cb0f73f13",
+      "b_secret": "2222222222222222222222222222222222222222222222222222222222222222",
+      "b_public": "0faa684ed28867b97f4a6a2dee5df8ce974e76b7018e3f22a1c4cf2678570f20",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682"
+    },
+    {
+      "name": "alice-carol",
+      "a_secret": "1111111111111111111111111111111111111111111111111111111111111111",
+      "a_public": "7b4e909bbe7ffe44c465a220037d608ee35897d31ef972f07f74892cb0f73f13",
+      "b_secret": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "b_public": "7f115a43399180f6c05b02e1265fef92c2d91961b0cd3c6d8fa1cd001589fc0f",
+      "key": "385b144ab7b82ddaefdf2e4191d3bec7b04ea83be6228e64d4c0ca0df43435e1"
+    }
+  ],
+  "messages": [
+    {
+      "name": "ascii",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "plaintext": "hello",
+      "body": "AbVUPpnEU7cxkT8XsDXKA5e+MMS8V8cj04uUSnG16PY0/HdxJ2opcgmBldAyAQ=="
+    },
+    {
+      "name": "empty",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "plaintext": "",
+      "body": "AbvDEw+qzek4qIsgcwY9E4mB056EIneLbQ4M8NOQUDqdkUWdMnbCDPo="
+    },
+    {
+      "name": "emoji",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "plaintext": "Yay! a beautiful snowflake 👇",
+      "body": "Aeg9RtfSMlKwN5lQlHHh1aTp6etvcNAiYqg2AE/t7LJ6+cJuMPsS2UXlLc2f0ov5chfECXgnWqD/WcejhtsvRZGLdznaQWJv"
+    },
+    {
+      "name": "multiline",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "plaintext": "one\ntwo\n\nthree",
+      "body": "Aat89jjVEn3kyU8C8pEiVvTbP1YbIMN1/N0gQNVZFlYf5ILBDIshZkteI+h6BfVCGtuWR1mjig=="
+    },
+    {
+      "name": "long",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "plaintext": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "body": "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"
+    },
+    {
+      "name": "json-payload",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "plaintext": "{\"kind\":\"text\",\"text\":\"hi\"}",
+      "body": "AagdKcBCsszQjk9h3Jt3MsF8C4BEZx5LhmL6m3Zm8m/XY9NRiVUWmdIYXgy0/p4Pt+E7y7sAUNAGwgHTKF8UNh8C4AY="
+    }
+  ],
+  "rejects": [
+    {
+      "name": "swapped-direction",
+      "from": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "to": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "body": "AbVUPpnEU7cxkT8XsDXKA5e+MMS8V8cj04uUSnG16PY0/HdxJ2opcgmBldAyAQ=="
+    },
+    {
+      "name": "wrong-key",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "385b144ab7b82ddaefdf2e4191d3bec7b04ea83be6228e64d4c0ca0df43435e1",
+      "body": "AbVUPpnEU7cxkT8XsDXKA5e+MMS8V8cj04uUSnG16PY0/HdxJ2opcgmBldAyAQ=="
+    },
+    {
+      "name": "wrong-version",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "body": "ALVUPpnEU7cxkT8XsDXKA5e+MMS8V8cj04uUSnG16PY0/HdxJ2opcgmBldAyAQ=="
+    },
+    {
+      "name": "tampered-nonce",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "body": "AbVUP5nEU7cxkT8XsDXKA5e+MMS8V8cj04uUSnG16PY0/HdxJ2opcgmBldAyAQ=="
+    },
+    {
+      "name": "tampered-ciphertext",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "body": "AbVUPpnEU7cxkT8XsDXKA5e+MMS8V8cj04uUSnG16PY0/HdxJ2opcgmBldAyAA=="
+    },
+    {
+      "name": "not-base64",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "body": "not a message"
+    },
+    {
+      "name": "too-short",
+      "from": "NQ65 6MV2 TPDD 4H1J KDAU 7HBF 9Y51 7MEQ 0MS9",
+      "to": "NQ52 B1N0 YTG5 P1R7 NSC7 R25H ER9G EYPD FFCX",
+      "key": "165b8f28ea60cac610d02594881edd6b05d5ce7b3405819dfaf2c0246e4ee682",
+      "body": "AQID"
+    }
+  ]
+}

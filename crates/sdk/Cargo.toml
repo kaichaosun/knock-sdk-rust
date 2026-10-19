@@ -1,0 +1,37 @@
+[package]
+name = "knock-sdk"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Speak Knock: sign in, poll, decrypt, reply."
+readme = "../../README.md"
+keywords = ["knock", "nimiq", "chat", "bot", "e2ee"]
+categories = ["api-bindings", "cryptography"]
+
+[dependencies]
+# The message layer. The relay never decrypts, so none of this existed in Rust
+# before — see `crypto` for what pins it to the app's format.
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+chacha20poly1305 = "0.10"
+hkdf = "0.12"
+
+# Pinned to what the relay pins, so a signature made here and verified there is
+# made by the same code. Ed25519 is Ed25519, but a second major version would
+# also drag a second `sha2` in beside the one above for no gain.
+ed25519-dalek = "2"
+sha2 = "0.10"
+
+# The same encoder the relay uses, so hex and base64 mean one thing across both.
+data-encoding = "2"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+# `macros` and `sync` for answering while a handler is still writing — see `Saying`.
+tokio = { version = "1", features = ["macros", "sync", "time"] }
+getrandom = "0.4.3"
+blake2 = "0.11.0"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "macros", "time"] }

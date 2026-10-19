@@ -1,0 +1,16 @@
+[package]
+name = "knock-echo"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "A bot that says back what it was told. The smallest real one."
+publish = false
+
+[dependencies]
+knock-sdk = { workspace = true }
+data-encoding = "2"
+getrandom = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }

@@ -1,0 +1,18 @@
+# The Rust SDK for Knock.
+#
+# A bot is not a special kind of account: it is an address that can sign a
+# challenge, which is all the relay has ever asked of anybody. So none of this
+# needs the relay's help — `knock-sdk` speaks the same protocol a phone does.
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/kaichaosun/knock-sdk-rust"
+
+# So a bot depends on `knock-sdk = { workspace = true }` and the path lives in
+# one place.
+[workspace.dependencies]
+knock-sdk = { path = "crates/sdk" }
