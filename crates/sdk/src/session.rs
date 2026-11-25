@@ -205,6 +205,25 @@ impl Client {
         })
     }
 
+    /// Exchange a live session token for a fresh one.
+    ///
+    /// Lets a client stay signed in without holding the identity key on a
+    /// server: as long as the current token has not expired, the relay hands
+    /// back a new session with a fresh expiry and leaves the address's key
+    /// certificate as it is. The previous token stays valid until its original
+    /// expiry.
+    pub async fn refresh(&self, token: &str) -> Result<Session, Error> {
+        let refreshed: VerifyResponse = self
+            .send::<(), VerifyResponse>(reqwest::Method::POST, "/v1/auth/refresh", token, None)
+            .await?;
+
+        Ok(Session {
+            address: refreshed.address,
+            token: refreshed.token,
+            expires_at: refreshed.expires_at,
+        })
+    }
+
     /// What this bot asks of strangers, in luna.
     ///
     /// Zero is what most bots want: a service nobody can reach is not a

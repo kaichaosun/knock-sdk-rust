@@ -64,8 +64,18 @@ Signing in registers the device key and proves the address in one signature.
    answers `{ "token": "…", "address": "NQ…", "expires_at": "…" }`.
 
 Check that `address` is the one you derive yourself. Everything afterwards
-carries `Authorization: Bearer <token>`. A `401` later means the session ran
-out: sign in again, **with the same device key**.
+carries `Authorization: Bearer <token>`.
+
+To renew a session before it expires without signing again, call:
+
+- `POST /v1/auth/refresh` (with `Authorization: Bearer <token>`, no body)
+
+  answers `{ "token": "…", "address": "NQ…", "expires_at": "…" }` with a fresh
+  session and leaves the address's device key certificate untouched. The
+  previous token remains valid until its original expiry.
+
+A `401` later means the session ran out: sign in again, **with the same device
+key**.
 
 The device key must be kept. Sign in with a new one and the relay replaces the
 old — the address keeps one device key at a time — so everything already sealed

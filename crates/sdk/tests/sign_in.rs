@@ -64,6 +64,31 @@ async fn the_address_comes_from_the_key_that_signed() {
 
 #[tokio::test]
 #[ignore]
+async fn a_session_can_be_refreshed_without_signing_again() {
+    let client = relay();
+    let session = client
+        .sign_in(&Identity::new([9u8; 32]), &[4u8; 32])
+        .await
+        .expect("sign in");
+
+    let refreshed = client.refresh(&session.token).await.expect("refresh");
+    assert_eq!(refreshed.address, session.address);
+    assert_ne!(refreshed.token, session.token);
+    assert!(!refreshed.expires_at.is_empty());
+
+    // The refreshed token is accepted by authenticated routes.
+    client
+        .published(&refreshed.token, &refreshed.address)
+        .await
+        .expect("refreshed token works");
+
+    // A bogus token is refused with 401.
+    let err = client.refresh("not-a-real-token").await.unwrap_err();
+    assert!(err.session_expired(), "expected 401, got {err:?}");
+}
+
+#[tokio::test]
+#[ignore]
 async fn a_relay_that_is_not_there_says_so() {
     let nowhere = Client::new("http://127.0.0.1:1");
     let failure = nowhere
